@@ -78,6 +78,8 @@ currency-converter-app/
 │   │   └── JsonProcessor.java               # Clase para procesar y extraer datos de tasas de cambio del JSON
 │
 ├── README.md                                # Archivo de documentación del proyecto
+
+
 Cada archivo cumple un rol específico, garantizando la modularidad y mantenibilidad del código:
 
 CurrencyConverterApp.java: Gestiona la lógica principal y la interacción con el usuario.
