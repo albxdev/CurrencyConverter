@@ -1,64 +1,81 @@
-Convertidor de Monedas - CurrencyConverterApp
-La aplicación CurrencyConverterApp es una aplicación de consola desarrollada en Java 17, diseñada para realizar conversiones de moneda precisas y en tiempo real utilizando datos actualizados de tasas de cambio de una API externa. Su diseño intuitivo y su interfaz de usuario basada en texto permiten a los usuarios realizar conversiones de manera rápida y precisa, accediendo a una variedad de monedas y tasas de cambio desde una única fuente de datos confiable.
+# Convertidor de Monedas - CurrencyConverterApp
 
-Descripción del Proyecto
-CurrencyConverterApp proporciona conversiones de moneda de manera eficiente mediante el uso de un menú interactivo. Esta aplicación está diseñada para ejecutarse en cualquier máquina con Java 17 instalado y conexión a Internet, haciendo solicitudes a una API de tasas de cambio en tiempo real. La aplicación permite realizar las siguientes operaciones:
+La aplicación `CurrencyConverterApp` es una aplicación de consola desarrollada en Java 17, diseñada para realizar conversiones de moneda precisas y en tiempo real utilizando datos actualizados de tasas de cambio de una API externa. Su diseño intuitivo y su interfaz de usuario basada en texto permiten a los usuarios realizar conversiones de manera rápida y precisa, accediendo a una variedad de monedas y tasas de cambio desde una única fuente de datos confiable.
 
-Conversión Personalizada entre Monedas: Selección entre varios pares de monedas comunes para conversiones rápidas.
-Conversión General entre Monedas: Selección flexible entre cualquier par de monedas admitidas por la API.
-Visualización de Tasas de Cambio: Permite consultar rápidamente las tasas de cambio actuales de algunas de las monedas más utilizadas.
-Beneficios de esta Aplicación
-Actualización en Tiempo Real: Obtiene tasas de cambio actualizadas al instante de la API.
-Fácil Usabilidad: Interfaz basada en menú para una interacción sencilla.
-Adaptabilidad: Capacidad de ampliar o ajustar las opciones de conversión según las necesidades del usuario.
-Fiabilidad: Fuente de datos segura y precisa con el respaldo de ExchangeRate-API.
-Tecnologías Utilizadas
-Java 17: Lenguaje de programación principal para la aplicación.
-Java.net.HttpClient: Librería utilizada para realizar solicitudes HTTP a la API de tasas de cambio.
-Google Gson: Librería para la conversión y manipulación de datos JSON de manera estructurada.
-Logger: Herramienta para registrar mensajes de información y errores.
-ExchangeRate-API: API de terceros utilizada como fuente de datos para las tasas de cambio.
-Prerrequisitos para la Ejecución
+## Descripción del Proyecto
+
+`CurrencyConverterApp` proporciona conversiones de moneda de manera eficiente mediante el uso de un menú interactivo. Esta aplicación está diseñada para ejecutarse en cualquier máquina con Java 17 instalado y conexión a Internet, haciendo solicitudes a una API de tasas de cambio en tiempo real. La aplicación permite realizar las siguientes operaciones:
+
+- **Conversión Personalizada entre Monedas**: Selección entre varios pares de monedas comunes para conversiones rápidas.
+- **Conversión General entre Monedas**: Selección flexible entre cualquier par de monedas admitidas por la API.
+- **Visualización de Tasas de Cambio**: Permite consultar rápidamente las tasas de cambio actuales de algunas de las monedas más utilizadas.
+
+## Beneficios de esta Aplicación
+
+- **Actualización en Tiempo Real**: Obtiene tasas de cambio actualizadas al instante de la API.
+- **Fácil Usabilidad**: Interfaz basada en menú para una interacción sencilla.
+- **Adaptabilidad**: Capacidad de ampliar o ajustar las opciones de conversión según las necesidades del usuario.
+- **Fiabilidad**: Fuente de datos segura y precisa con el respaldo de ExchangeRate-API.
+
+## Tecnologías Utilizadas
+
+- **Java 17**: Lenguaje de programación principal para la aplicación.
+- **Java.net.HttpClient**: Librería utilizada para realizar solicitudes HTTP a la API de tasas de cambio.
+- **Google Gson**: Librería para la conversión y manipulación de datos JSON de manera estructurada.
+- **Logger**: Herramienta para registrar mensajes de información y errores.
+- **ExchangeRate-API**: API de terceros utilizada como fuente de datos para las tasas de cambio.
+
+## Prerrequisitos para la Ejecución
+
 Antes de iniciar la aplicación, asegúrate de cumplir con los siguientes requisitos:
 
-Java 17: La aplicación está desarrollada en Java 17, por lo que necesitas tener esta versión del JDK instalada.
-Conexión a Internet: Es necesaria para realizar solicitudes a la API de tasas de cambio.
-Clave de API de ExchangeRate-API: Regístrate en https://www.exchangerate-api.com/ para obtener una clave de API y habilitar el acceso a los datos de tasas de cambio.
-Configuración Inicial
+- **Java 17**: La aplicación está desarrollada en Java 17, por lo que necesitas tener esta versión del JDK instalada.
+- **Conexión a Internet**: Es necesaria para realizar solicitudes a la API de tasas de cambio.
+- **Clave de API de ExchangeRate-API**: Regístrate en [ExchangeRate-API](https://www.exchangerate-api.com/) para obtener una clave de API y habilitar el acceso a los datos de tasas de cambio.
+
+## Configuración Inicial
+
 Para poner en funcionamiento esta aplicación en tu entorno local, sigue estos pasos:
 
-Clona el repositorio:
-git clone https://github.com/tu-usuario/currency-converter-app.git
-Accede al directorio del proyecto:
-cd currency-converter-app
-Agrega tu clave de API:
-Abre el archivo CurrencyConverterApp.java.
-Localiza la línea private static final String API_KEY = "tu_clave_api"; y reemplaza "tu_clave_api" con tu clave API personal obtenida de ExchangeRate-API.
-Instrucciones para Ejecutar la Aplicación en un IDE
-Importar el Proyecto:
+1. **Clona el repositorio**:
 
+   ```bash
+   git clone https://github.com/tu-usuario/currency-converter-app.git
+
+Accede al directorio del proyecto:
+
+bash
+Copiar código
+cd currency-converter-app
+Agrega tu clave de API: Abre el archivo CurrencyConverterApp.java. Localiza la línea:
+
+java
+Copiar código
+private static final String API_KEY = "tu_clave_api";
+Y reemplázala con tu clave API personal obtenida de ExchangeRate-API.
+
+Instrucciones para Ejecutar la Aplicación en un IDE
+Importar el Proyecto
 Abre tu IDE favorito (IntelliJ IDEA, Eclipse, etc.).
 Importa el proyecto como un proyecto Java estándar.
-Ejecutar la Aplicación:
-
+Ejecutar la Aplicación
 Dentro de tu IDE, localiza la clase principal CurrencyConverterApp.java.
 Haz clic derecho sobre la clase y selecciona "Run" para ejecutar el programa.
 Funcionamiento de la Aplicación
 Al iniciar la aplicación, verás un menú de opciones. A continuación, se detallan las opciones principales que se presentan:
 
 Opciones del Menú Principal
-Conversión Personalizada entre Monedas
-Permite convertir entre varios pares de divisas predefinidos, ideales para conversiones rápidas entre monedas populares como USD/EUR, USD/JPY, entre otras.
+Conversión Personalizada entre Monedas: Permite convertir entre varios pares de divisas predefinidos, ideales para conversiones rápidas entre monedas populares como USD/EUR, USD/JPY, entre otras.
 
-Conversión General entre Monedas
-Esta opción permite al usuario ingresar cualquier par de monedas soportadas por la API. Ofrece flexibilidad para realizar conversiones entre monedas menos comunes o personalizadas.
+Conversión General entre Monedas: Esta opción permite al usuario ingresar cualquier par de monedas soportadas por la API. Ofrece flexibilidad para realizar conversiones entre monedas menos comunes o personalizadas.
 
-Salir
-Finaliza la aplicación.
+Salir: Finaliza la aplicación.
 
 Ejemplo de Conversión
 En la sección de Conversión Personalizada, el usuario puede seleccionar un par de monedas y luego ingresar la cantidad a convertir. La aplicación consultará la API, mostrará la tasa de cambio actual y presentará el valor convertido en la moneda de destino.
 
+java
+Copiar código
 Ingrese la cantidad a convertir: 150
 Ingrese la moneda de origen (ej. USD): USD
 Ingrese la moneda de destino (ej. EUR): EUR
@@ -69,6 +86,8 @@ Para ajustar los pares de divisas disponibles en la opción de conversión perso
 Estructura del Proyecto
 El proyecto está organizado de la siguiente manera:
 
+bash
+Copiar código
 currency-converter-app/
 │
 ├── src/
@@ -78,8 +97,6 @@ currency-converter-app/
 │   │   └── JsonProcessor.java               # Clase para procesar y extraer datos de tasas de cambio del JSON
 │
 ├── README.md                                # Archivo de documentación del proyecto
-
-
 Cada archivo cumple un rol específico, garantizando la modularidad y mantenibilidad del código:
 
 CurrencyConverterApp.java: Gestiona la lógica principal y la interacción con el usuario.
