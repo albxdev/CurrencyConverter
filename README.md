@@ -90,26 +90,27 @@ En la sección de Conversión Personalizada, el usuario puede seleccionar un par
 
 ## Estructura del Proyecto
 
-**El proyecto está organizado de la siguiente manera:**
+1. **El proyecto está organizado de la siguiente manera:**
 
    ```bash
    currency-converter-app/ 
    │
    ├── src/
    │   ├── com.currencyconverter/
-   │   │   ├── CurrencyConverterApp.java        # Clase principal que ejecuta la aplicación
-   │   │   ├── ExchangeRatesResponse.java       # Clase de modelo que mapea la respuesta JSON de la API
-   │   │   └── JsonProcessor.java               # Clase para procesar y extraer datos de tasas de cambio del JSON
+   │   │   ├── CurrencyConverterApp.java           # Clase principal que ejecuta la aplicación
+   │   │   ├── ExchangeRatesResponse.java          # Clase de modelo que mapea la respuesta JSON de la API
+   │   │   └── JsonProcessor.java                  # Clase para procesar y extraer datos de tasas de cambio del JSON
    │
-   ├── README.md                                # Archivo de documentación del proyecto
+   ├── README.md                                   # Archivo de documentación del proyecto
 
-**Cada archivo cumple un rol específico, garantizando la modularidad y mantenibilidad del código:**
+
+2. **Cada archivo cumple un rol específico, garantizando la modularidad y mantenibilidad del código:**
 
 - **CurrencyConverterApp.java: Gestiona la lógica principal y la interacción con el usuario.**
 - **ExchangeRatesResponse.java: Define la estructura de datos para almacenar y manipular la respuesta JSON.**
 - **JsonProcessor.java: Procesa y transforma los datos JSON en objetos utilizables dentro de la aplicación.**
 
-## Seguridad y Consideraciones
+3. **Seguridad y Consideraciones**
 
 - **Protección de la Clave API: La clave de API es un recurso sensible. Evita compartirla en repositorios públicos o entornos inseguros.**
 - **Variables de Entorno: Para una mayor seguridad, considera almacenar la clave de API en una variable de entorno en lugar de incluirla directamente en el código fuente.**
