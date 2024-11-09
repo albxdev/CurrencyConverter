@@ -42,49 +42,58 @@ Para poner en funcionamiento esta aplicación en tu entorno local, sigue estos p
    ```bash
    git clone https://github.com/tu-usuario/currency-converter-app.git
 
-## Accede al directorio del proyecto:
+2. **Accede al directorio del proyecto**:
 
-```bash
+   ```bash
 cd currency-converter-app
-Agrega tu clave de API: Abre el archivo CurrencyConverterApp.java. Localiza la línea:
+
+3. **Agrega tu clave de API**: Abre el archivo `CurrencyConverterApp.java` y reemplaza la línea:
+
+   ```java
 private static final String API_KEY = "tu_clave_api";
-Y reemplázala con tu clave API personal obtenida de ExchangeRate-API.
+
+**Localiza la línea: private static final String API_KEY = "tu_clave_api";**
+
+**Y reemplázala con tu clave API personal obtenida de ExchangeRate-API**.
 
 ## Instrucciones para Ejecutar la Aplicación en un IDE:
 
-1. ** Importar el Proyecto**
-2. ** Abre tu IDE favorito (IntelliJ IDEA, Eclipse, etc.)**.
-3. ** Importa el proyecto como un proyecto Java estándar**.
-4. ** Ejecutar la Aplicación**
-5. ** Dentro de tu IDE, localiza la clase principal CurrencyConverterApp.java**.
-6. ** Haz clic derecho sobre la clase y selecciona "Run" para ejecutar el programa**.
+1. **Importar el Proyecto**
+2. **Abre tu IDE favorito (IntelliJ IDEA, Eclipse, etc.).**
+3. **Importa el proyecto como un proyecto Java estándar.**
+4. **Ejecutar la Aplicación**
+5. **Dentro de tu IDE, localiza la clase principal CurrencyConverterApp.java.**
+6. **Haz clic derecho sobre la clase y selecciona "Run" para ejecutar el programa.**
 
 ## Funcionamiento de la Aplicación
+
 Al iniciar la aplicación, verás un menú de opciones. A continuación, se detallan las opciones principales que se presentan:
 
-Opciones del Menú Principal
-Conversión Personalizada entre Monedas: Permite convertir entre varios pares de divisas predefinidos, ideales para conversiones rápidas entre monedas populares como USD/EUR, USD/JPY, entre otras.
+**Opciones del Menú Principal**
 
-Conversión General entre Monedas: Esta opción permite al usuario ingresar cualquier par de monedas soportadas por la API. Ofrece flexibilidad para realizar conversiones entre monedas menos comunes o personalizadas.
+1. **Conversión Personalizada entre Monedas: Permite convertir entre varios pares de divisas predefinidos, ideales para conversiones rápidas entre monedas populares como USD/EUR, USD/JPY, entre otras**.
 
-Salir: Finaliza la aplicación.
+2. **Conversión General entre Monedas: Esta opción permite al usuario ingresar cualquier par de monedas soportadas por la API. Ofrece flexibilidad para realizar conversiones entre monedas menos comunes o personalizadas.**
 
-Ejemplo de Conversión
+3. **Salir: Finaliza la aplicación.**
+
+## Ejemplo de Conversión
+
 En la sección de Conversión Personalizada, el usuario puede seleccionar un par de monedas y luego ingresar la cantidad a convertir. La aplicación consultará la API, mostrará la tasa de cambio actual y presentará el valor convertido en la moneda de destino.
 
+1. **Ingrese la cantidad a convertir: 150**
+2. **Ingrese la moneda de origen (ej. USD): USD**
+3. **Ingrese la moneda de destino (ej. EUR): EUR**
+4. **Resultado: 150 USD equivale a 137.45 EUR**
+5. **Personalización de la Aplicación**
+6. **Para ajustar los pares de divisas disponibles en la opción de conversión personalizada, puedes modificar el método realizarConversionPersonalizada() dentro de la clase principal CurrencyConverterApp. Puedes añadir o remover pares según lo necesites.**
 
-Ingrese la cantidad a convertir: 150
-Ingrese la moneda de origen (ej. USD): USD
-Ingrese la moneda de destino (ej. EUR): EUR
-Resultado: 150 USD equivale a 137.45 EUR
-Personalización de la Aplicación
-Para ajustar los pares de divisas disponibles en la opción de conversión personalizada, puedes modificar el método realizarConversionPersonalizada() dentro de la clase principal CurrencyConverterApp. Puedes añadir o remover pares según lo necesites.
+## Estructura del Proyecto
 
-Estructura del Proyecto
-El proyecto está organizado de la siguiente manera:
+**El proyecto está organizado de la siguiente manera:**
 
-```bash
-currency-converter-app/
+   ```bash
+currency-converter-app/ 
 │
 ├── src/
 │   ├── com.currencyconverter/
@@ -94,27 +103,31 @@ currency-converter-app/
 │
 ├── README.md                                # Archivo de documentación del proyecto
 
-Cada archivo cumple un rol específico, garantizando la modularidad y mantenibilidad del código:
+**Cada archivo cumple un rol específico, garantizando la modularidad y mantenibilidad del código:**
 
-CurrencyConverterApp.java: Gestiona la lógica principal y la interacción con el usuario.
-ExchangeRatesResponse.java: Define la estructura de datos para almacenar y manipular la respuesta JSON.
-JsonProcessor.java: Procesa y transforma los datos JSON en objetos utilizables dentro de la aplicación.
+- **CurrencyConverterApp.java: Gestiona la lógica principal y la interacción con el usuario.**
+- **ExchangeRatesResponse.java: Define la estructura de datos para almacenar y manipular la respuesta JSON.**
+- **JsonProcessor.java: Procesa y transforma los datos JSON en objetos utilizables dentro de la aplicación.**
 
-Seguridad y Consideraciones
+## Seguridad y Consideraciones
 
-Protección de la Clave API: La clave de API es un recurso sensible. Evita compartirla en repositorios públicos o entornos inseguros.
-Variables de Entorno: Para una mayor seguridad, considera almacenar la clave de API en una variable de entorno en lugar de incluirla directamente en el código fuente.
-Planificación para Mejoras Futuras
-Interfaz Gráfica de Usuario (GUI): Migrar a una interfaz gráfica para una experiencia más intuitiva.
-Historial de Conversiones: Implementación de un sistema para registrar y consultar conversiones previas.
-Gestión de Errores Mejorada: Ampliar la captura y el tratamiento de errores para mejorar la robustez de la aplicación.
-Contribución
+- **Protección de la Clave API: La clave de API es un recurso sensible. Evita compartirla en repositorios públicos o entornos inseguros.**
+- **Variables de Entorno: Para una mayor seguridad, considera almacenar la clave de API en una variable de entorno en lugar de incluirla directamente en el código fuente.**
+- **Planificación para Mejoras Futuras**
+- **Interfaz Gráfica de Usuario (GUI): Migrar a una interfaz gráfica para una experiencia más intuitiva.**
+- **Historial de Conversiones: Implementación de un sistema para registrar y consultar conversiones previas.**
+- **Gestión de Errores Mejorada: Ampliar la captura y el tratamiento de errores para mejorar la robustez de la aplicación.**
+
+## Contribución
+
 Este proyecto está abierto a contribuciones y mejoras. Si deseas colaborar, sigue estos pasos:
 
-Haz un fork de este repositorio.
+## Haz un fork de este repositorio.
+
 Crea una rama con la nueva funcionalidad o mejora (git checkout -b feature/nueva-funcionalidad).
 Realiza un pull request con una descripción detallada de los cambios.
-Licencia
+
+## Licencia
 Este proyecto está disponible bajo la licencia MIT. Consulta el archivo LICENSE para conocer los términos completos.
 
-© 2024 Albx.Dev - Aplicación de Convertidor de Monedas
+## © 2024 Albx.Dev - Aplicación de Convertidor de Monedas
