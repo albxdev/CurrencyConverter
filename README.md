@@ -42,26 +42,24 @@ Para poner en funcionamiento esta aplicación en tu entorno local, sigue estos p
    ```bash
    git clone https://github.com/tu-usuario/currency-converter-app.git
 
-Accede al directorio del proyecto:
+## Accede al directorio del proyecto:
 
-bash
-Copiar código
+```bash
 cd currency-converter-app
 Agrega tu clave de API: Abre el archivo CurrencyConverterApp.java. Localiza la línea:
-
-java
-Copiar código
 private static final String API_KEY = "tu_clave_api";
 Y reemplázala con tu clave API personal obtenida de ExchangeRate-API.
 
-Instrucciones para Ejecutar la Aplicación en un IDE
-Importar el Proyecto
-Abre tu IDE favorito (IntelliJ IDEA, Eclipse, etc.).
-Importa el proyecto como un proyecto Java estándar.
-Ejecutar la Aplicación
-Dentro de tu IDE, localiza la clase principal CurrencyConverterApp.java.
-Haz clic derecho sobre la clase y selecciona "Run" para ejecutar el programa.
-Funcionamiento de la Aplicación
+## Instrucciones para Ejecutar la Aplicación en un IDE:
+
+1. ** Importar el Proyecto**
+2. ** Abre tu IDE favorito (IntelliJ IDEA, Eclipse, etc.)**.
+3. ** Importa el proyecto como un proyecto Java estándar**.
+4. ** Ejecutar la Aplicación**
+5. ** Dentro de tu IDE, localiza la clase principal CurrencyConverterApp.java**.
+6. ** Haz clic derecho sobre la clase y selecciona "Run" para ejecutar el programa**.
+
+## Funcionamiento de la Aplicación
 Al iniciar la aplicación, verás un menú de opciones. A continuación, se detallan las opciones principales que se presentan:
 
 Opciones del Menú Principal
@@ -74,8 +72,7 @@ Salir: Finaliza la aplicación.
 Ejemplo de Conversión
 En la sección de Conversión Personalizada, el usuario puede seleccionar un par de monedas y luego ingresar la cantidad a convertir. La aplicación consultará la API, mostrará la tasa de cambio actual y presentará el valor convertido en la moneda de destino.
 
-java
-Copiar código
+
 Ingrese la cantidad a convertir: 150
 Ingrese la moneda de origen (ej. USD): USD
 Ingrese la moneda de destino (ej. EUR): EUR
@@ -86,8 +83,7 @@ Para ajustar los pares de divisas disponibles en la opción de conversión perso
 Estructura del Proyecto
 El proyecto está organizado de la siguiente manera:
 
-bash
-Copiar código
+```bash
 currency-converter-app/
 │
 ├── src/
@@ -97,12 +93,15 @@ currency-converter-app/
 │   │   └── JsonProcessor.java               # Clase para procesar y extraer datos de tasas de cambio del JSON
 │
 ├── README.md                                # Archivo de documentación del proyecto
+
 Cada archivo cumple un rol específico, garantizando la modularidad y mantenibilidad del código:
 
 CurrencyConverterApp.java: Gestiona la lógica principal y la interacción con el usuario.
 ExchangeRatesResponse.java: Define la estructura de datos para almacenar y manipular la respuesta JSON.
 JsonProcessor.java: Procesa y transforma los datos JSON en objetos utilizables dentro de la aplicación.
+
 Seguridad y Consideraciones
+
 Protección de la Clave API: La clave de API es un recurso sensible. Evita compartirla en repositorios públicos o entornos inseguros.
 Variables de Entorno: Para una mayor seguridad, considera almacenar la clave de API en una variable de entorno en lugar de incluirla directamente en el código fuente.
 Planificación para Mejoras Futuras
