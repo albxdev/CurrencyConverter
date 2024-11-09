@@ -36,7 +36,6 @@ public class JsonProcessor {
     }
 
     public static void main(String[] args) {
-        // Aquí puedes colocar la respuesta JSON que obtuviste con Postman
         String jsonResponse = """
                 {
                     "result": "success",
@@ -60,8 +59,6 @@ public class JsonProcessor {
                     }
                 }
             """;
-
-        // Procesamos la respuesta
-        processResponse(jsonResponse);
+         processResponse(jsonResponse);
     }
 }

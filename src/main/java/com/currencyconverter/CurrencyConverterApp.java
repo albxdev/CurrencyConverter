@@ -11,7 +11,7 @@ import java.util.logging.Logger;
 
 public class CurrencyConverterApp {
 
-    private static final String API_KEY = ("fb475756d58b2d50cfebfd8c");  // Usa tu propia clave de API
+    private static final String API_KEY = ("fb475756d58b2d50cfebfd8c");
     private static final String BASE_URL = "https://v6.exchangerate-api.com/v6/" + API_KEY + "/latest/";
 
     private static final Logger logger = Logger.getLogger(CurrencyConverterApp.class.getName());
@@ -25,7 +25,7 @@ public class CurrencyConverterApp {
         }
 
         // Crear instancia de la clase ExchangeRates para obtener tasas de cambio
-        ExchangeRatesResponse exchangeRatesResponse = new ExchangeRatesResponse(ratesJson); // Supone que esta clase puede recibir el JSON y procesarlo
+        ExchangeRatesResponse exchangeRatesResponse = new ExchangeRatesResponse(ratesJson);
         Map<String, Double> rates = exchangeRatesResponse.getRates();
 
         // Crear un objeto Scanner para capturar la entrada del usuario
