@@ -45,12 +45,12 @@ Para poner en funcionamiento esta aplicación en tu entorno local, sigue estos p
 2. **Accede al directorio del proyecto**:
 
    ```bash
-cd currency-converter-app
+   cd currency-converter-app
 
 3. **Agrega tu clave de API**: Abre el archivo `CurrencyConverterApp.java` y reemplaza la línea:
 
    ```java
-private static final String API_KEY = "tu_clave_api";
+   private static final String API_KEY = "tu_clave_api";
 
 **Localiza la línea: private static final String API_KEY = "tu_clave_api";**
 
@@ -93,15 +93,15 @@ En la sección de Conversión Personalizada, el usuario puede seleccionar un par
 **El proyecto está organizado de la siguiente manera:**
 
    ```bash
-currency-converter-app/ 
-│
-├── src/
-│   ├── com.currencyconverter/
-│   │   ├── CurrencyConverterApp.java        # Clase principal que ejecuta la aplicación
-│   │   ├── ExchangeRatesResponse.java       # Clase de modelo que mapea la respuesta JSON de la API
-│   │   └── JsonProcessor.java               # Clase para procesar y extraer datos de tasas de cambio del JSON
-│
-├── README.md                                # Archivo de documentación del proyecto
+   currency-converter-app/ 
+   │
+   ├── src/
+   │   ├── com.currencyconverter/
+   │   │   ├── CurrencyConverterApp.java        # Clase principal que ejecuta la aplicación
+   │   │   ├── ExchangeRatesResponse.java       # Clase de modelo que mapea la respuesta JSON de la API
+   │   │   └── JsonProcessor.java               # Clase para procesar y extraer datos de tasas de cambio del JSON
+   │
+   ├── README.md                                # Archivo de documentación del proyecto
 
 **Cada archivo cumple un rol específico, garantizando la modularidad y mantenibilidad del código:**
 
